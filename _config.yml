@@ -1,0 +1,12 @@
+title: Eason Notes
+description: "Research notes: judgment, evidence, the strongest counter-argument, and what would prove me wrong."
+url: "https://easonnotes.com"
+theme: minima
+header_pages:
+  - about.md
+  - now.md
+  - disclaimer.md
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
