@@ -7,6 +7,7 @@ en:
   back: "All entries"
   disclaimer: "These are reviews of my own closed trades, for learning purposes only. Not investment advice."
   translation_note: "This text was written in English."
+  written_on: "Written on %s. Published unchanged."
 
 zh:
   date_format: "%Y年%-m月%-d日"
@@ -17,6 +18,7 @@ zh:
   back: "全部记录"
   disclaimer: "以上为我本人已平仓交易的复盘，仅用于学习记录，不构成投资建议。"
   translation_note: "本文由 AI 从英文原文翻译。判断出自我本人，措辞可能有偏差。以英文原文为准。"
+  written_on: "写于 %s。当时的判断，未做修改。"
 
 fr:
   date_format: "%-d %b %Y"
@@ -27,3 +29,4 @@ fr:
   back: "Toutes les entrées"
   disclaimer: "Ce sont des analyses de mes propres positions clôturées, à des fins d'apprentissage uniquement. Ceci ne constitue pas un conseil en investissement."
   translation_note: "Ce texte a été traduit par IA à partir de l'original anglais. Le raisonnement est le mien ; la formulation peut s'en écarter légèrement. En cas de doute, l'original fait foi."
+  written_on: "Rédigé le %s. Publié sans modification."

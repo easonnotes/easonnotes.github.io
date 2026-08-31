@@ -12,6 +12,10 @@ layout: default
 
   <h1>{{ page.title }}</h1>
 
+  {%- if page.written_on -%}
+  <p class="written">{{ strings.written_on | replace: "%s", page.written_on }}</p>
+  {%- endif -%}
+
   {%- if page.judgment -%}
   <div class="core">
     <div class="three">
