@@ -1,12 +1,34 @@
 title: Eason Notes
-description: "Research notes: judgment, evidence, the strongest counter-argument, and what would prove me wrong."
-url: "https://easonnotes.com"
-theme: minima
-header_pages:
-  - about.md
-  - now.md
-  - disclaimer.md
+description: A judgment archive. Reviews of my own closed trades, for learning only.
+url: https://easonnotes.com
+author: Eason
+
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+
+feed:
+  path: /feed.xml
+
+exclude:
+  - README.md
+  - OPERATING.md
+  - Gemfile
+  - Gemfile.lock
+
+# ---- 三语设置 ----
+languages:
+  - code: en
+    label: EN
+    name: English
+  - code: zh
+    label: 中文
+    name: 中文
+  - code: fr
+    label: FR
+    name: Français
+
+default_lang: en

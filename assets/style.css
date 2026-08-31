@@ -1,0 +1,147 @@
+/* Eason Notes — judgment archive
+   ink #141414 · paper #EFEFEC · card #FCFCFA · mark #1F4FD8 */
+
+:root{
+  --bg:#EFEFEC;
+  --card:#FCFCFA;
+  --ink:#141414;
+  --soft:#56585A;
+  --faint:#8E9092;
+  --line:#DCDCD7;
+  --mark:#1F4FD8;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,monospace;
+  --cjk:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+html[lang="zh"] body{font-family:var(--sans),var(--cjk);line-height:1.8;letter-spacing:.01em}
+html[lang="zh"] .brand,html[lang="zh"] .hero h1,html[lang="zh"] article h1{font-weight:600}
+a{color:inherit}
+
+.wrap{max-width:52rem;margin:0 auto;padding:0 1.75rem}
+
+/* ---------- header ---------- */
+header{
+  padding:1.6rem 0;display:flex;justify-content:space-between;
+  align-items:center;gap:1.5rem;flex-wrap:wrap;
+}
+.brand{
+  font-weight:700;font-size:1.05rem;letter-spacing:-.03em;
+  text-decoration:none;font-stretch:95%;
+}
+nav a{
+  font-family:var(--mono);font-size:.76rem;color:var(--faint);
+  text-decoration:none;margin-left:.9rem;
+}
+nav a:hover{color:var(--ink)}
+nav a.on{color:var(--mark);font-weight:500}
+
+/* ---------- hero ---------- */
+.hero{padding:4rem 0 3rem;border-bottom:2px solid var(--ink)}
+.hero .n{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mark);margin-bottom:1.4rem;
+}
+.hero h1{
+  margin:0 0 1.1rem;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;
+  letter-spacing:-.04em;line-height:1.15;max-width:20ch;
+}
+html[lang="zh"] .hero h1{letter-spacing:0;line-height:1.4}
+.hero p{margin:0;color:var(--soft);max-width:44ch}
+
+/* ---------- entry list ---------- */
+.list{padding:2.5rem 0 1rem}
+.item{
+  background:var(--card);border:1px solid var(--line);
+  padding:1.9rem 1.8rem;margin-bottom:1.1rem;display:block;
+  text-decoration:none;color:inherit;
+  transition:border-color .2s ease,transform .2s ease;
+}
+.item:hover{border-color:var(--ink);transform:translateY(-2px)}
+.item .top{
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.73rem;color:var(--faint);
+  margin-bottom:1.2rem;letter-spacing:.03em;
+}
+.item .top b{color:var(--ink);font-weight:500}
+
+.three{display:grid;gap:.85rem}
+.three .r{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;align-items:baseline}
+.three .lab{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mark);
+}
+.three .val{font-size:1rem;line-height:1.55}
+.three .r:first-child .val{font-weight:600;font-size:1.06rem;letter-spacing:-.015em}
+.three .r:not(:first-child) .val{color:var(--soft);font-size:.93rem}
+html[lang="zh"] .three .r:first-child .val{letter-spacing:0}
+
+.excerpt{color:var(--soft);font-size:.95rem;margin:0}
+
+/* ---------- article ---------- */
+article{padding:3rem 0 1rem;max-width:38rem}
+article .meta{
+  font-family:var(--mono);font-size:.73rem;color:var(--faint);
+  letter-spacing:.03em;margin-bottom:1.1rem;
+}
+article .meta b{color:var(--ink);font-weight:500}
+article h1{
+  font-size:clamp(1.5rem,3.4vw,2.05rem);font-weight:700;
+  letter-spacing:-.035em;line-height:1.2;margin:0 0 2.4rem;
+}
+html[lang="zh"] article h1{letter-spacing:0;line-height:1.45}
+
+.core{
+  background:var(--card);border:1px solid var(--line);
+  border-left:2px solid var(--mark);
+  padding:1.6rem 1.6rem;margin:0 0 2.6rem;
+}
+article p{margin:0 0 1.35rem;font-size:1.02rem;line-height:1.75}
+html[lang="zh"] article p{line-height:1.95}
+article h2{font-size:1.15rem;font-weight:600;letter-spacing:-.02em;margin:2.4rem 0 1rem}
+article ul,article ol{padding-left:1.2rem;margin:0 0 1.35rem}
+article li{margin-bottom:.5rem}
+article strong{font-weight:600}
+article hr{border:none;border-top:1px solid var(--line);margin:2.5rem 0}
+
+.note{
+  font-size:.85rem;color:var(--faint);line-height:1.65;
+  border-top:1px solid var(--line);padding-top:1.2rem;margin-top:3rem;
+}
+.note em{font-style:normal;color:var(--soft)}
+
+.backlink{
+  font-family:var(--mono);font-size:.75rem;color:var(--faint);
+  text-decoration:none;display:inline-block;margin:2.5rem 0 0;
+}
+.backlink:hover{color:var(--mark)}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--line);margin-top:2.5rem;
+  padding:1.6rem 0 4rem;font-family:var(--mono);font-size:.73rem;
+  color:var(--faint);display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:.8rem;
+}
+
+/* ---------- a11y / motion ---------- */
+:focus-visible{outline:2px solid var(--mark);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .item:hover{transform:none}
+}
+
+/* ---------- narrow ---------- */
+@media (max-width:620px){
+  .three .r{grid-template-columns:1fr;gap:.25rem}
+  .item{padding:1.5rem 1.3rem}
+  .wrap{padding:0 1.25rem}
+  .hero{padding:3rem 0 2.4rem}
+}

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- assign lang = page.lang -%}
+{%- assign notes = site.posts | where: "lang", lang -%}
+
+<div class="hero">
+  <div class="n">{{ page.eyebrow }} · {{ notes | size }}</div>
+  <h1>{{ page.headline }}</h1>
+  <p>{{ page.standfirst }}</p>
+</div>
+
+<div class="list">
+{%- for n in notes -%}
+  <a class="item" href="{{ n.url | relative_url }}">
+    <div class="top">
+      <span>{%- if n.instrument -%}<b>{{ n.instrument }}</b>{%- if n.position %} · {{ n.position }}{% endif %}{%- endif -%}</span>
+      <span>{{ n.date | date: page.date_format }}</span>
+    </div>
+
+    {%- if n.judgment -%}
+    <div class="three">
+      <div class="r"><span class="lab">{{ page.lab_judgment }}</span><span class="val">{{ n.judgment }}</span></div>
+      {%- if n.counter -%}
+      <div class="r"><span class="lab">{{ page.lab_counter }}</span><span class="val">{{ n.counter }}</span></div>
+      {%- endif -%}
+      {%- if n.falsifier -%}
+      <div class="r"><span class="lab">{{ page.lab_falsifier }}</span><span class="val">{{ n.falsifier }}</span></div>
+      {%- endif -%}
+    </div>
+    {%- else -%}
+    <div class="three">
+      <div class="r"><span class="lab">{{ page.lab_note }}</span><span class="val">{{ n.title }}</span></div>
+    </div>
+    {%- endif -%}
+  </a>
+{%- endfor -%}
+</div>
